@@ -5,7 +5,7 @@ import br.com.refatorandofacilitador.model.Modelo;
 import java.util.Scanner;
 
 public class TelaDeInteracao {
-    public static void InteracaoComUsuario() {
+    public static void interacaoComUsuario() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("EAN DO PRODUTO= ");

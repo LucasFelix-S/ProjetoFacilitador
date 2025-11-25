@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class LeitorCsv {
     public static String lendoCsv(Modelo modelo) {
-        String arquivo = "dados-leitura-java.csv";
+        String arquivo = "dados-cadastrais-dos-produtos.csv";
         String linhas = "";
 
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(arquivo))){

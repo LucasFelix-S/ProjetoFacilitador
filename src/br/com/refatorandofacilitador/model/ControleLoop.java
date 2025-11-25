@@ -4,7 +4,7 @@ import br.com.refatorandofacilitador.view.TelaDeInteracao;
 public class ControleLoop {
     public static void condicaoLoop(String loop) {
         if (loop.equals("1")) {
-            TelaDeInteracao.InteracaoComUsuario();
+            TelaDeInteracao.interacaoComUsuario();
         } else if (loop.equals("2")) {
             System.out.println("Saindo...");
         } else {

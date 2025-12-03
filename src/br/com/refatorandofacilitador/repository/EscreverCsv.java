@@ -7,7 +7,7 @@ public class EscreverCsv {
     public static void escrevendoCsv(String modelo) {
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("saida.csv", true))){
             bufferedWriter.write(modelo.toString());
-            bufferedWriter.newLine();
+//            bufferedWriter.newLine();
             bufferedWriter.flush();
         } catch (IOException e) {
             System.out.println("Erro= " + e);

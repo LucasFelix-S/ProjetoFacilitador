@@ -1,11 +1,10 @@
-package br.com.refatorandofacilitador.repository;
-import br.com.refatorandofacilitador.model.Modelo;
+package br.com.refatorandofacilitador.file;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LeitorCsv {
-    public static String lendoCsv(Modelo modelo) {
+public class ReadCsv {
+    public static String lendoCsv(CsvModel modelo) {
         String arquivo = "dados-cadastrais-dos-produtos.csv";
         String linhas = "";
 
@@ -14,7 +13,7 @@ public class LeitorCsv {
                 if(linhas.contains(modelo.getEan())) {
                     System.out.println(linhas);
                     modelo.setResultado(linhas);
-                    EscreverCsv.escrevendoCsv(modelo.toString());
+                    WriteCsv.escrevendoCsv(modelo.toString());
                     break;
                 } else {
                     System.out.println("EAN não encontrado no arquivo .csv. Imprimindo modelo genérico: ");

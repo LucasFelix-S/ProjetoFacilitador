@@ -1,7 +1,7 @@
-package br.com.refatorandofacilitador.model;
-import br.com.refatorandofacilitador.view.TelaDeInteracao;
+package br.com.refatorandofacilitador.loop;
+import br.com.refatorandofacilitador.ui.TelaDeInteracao;
 
-public class ControleLoop {
+public class LoopControl {
     public static void condicaoLoop(String loop) {
         if (loop.equals("1")) {
             TelaDeInteracao.interacaoComUsuario();

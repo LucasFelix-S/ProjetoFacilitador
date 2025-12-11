@@ -1,6 +1,6 @@
-package br.com.refatorandofacilitador.model;
+package br.com.refatorandofacilitador.file;
 
-public class Modelo {
+public class CsvModel {
     private String ean;
     private String lote;
     private String validade;

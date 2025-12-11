@@ -1,7 +1,7 @@
-package br.com.refatorandofacilitador.view;
-import br.com.refatorandofacilitador.repository.LeitorCsv;
-import br.com.refatorandofacilitador.model.Loop;
-import br.com.refatorandofacilitador.model.Modelo;
+package br.com.refatorandofacilitador.ui;
+import br.com.refatorandofacilitador.file.ReadCsv;
+import br.com.refatorandofacilitador.loop.Loop;
+import br.com.refatorandofacilitador.file.CsvModel;
 import java.util.Scanner;
 
 public class TelaDeInteracao {
@@ -20,13 +20,13 @@ public class TelaDeInteracao {
         System.out.println("QUANTIDADE CONTADA= ");
         int quantidade = scanner.nextInt();
 
-        Modelo modelo = new Modelo();
+        CsvModel modelo = new CsvModel();
         modelo.setEan(ean);
         modelo.setLote(lote);
         modelo.setValidade(validade);
         modelo.setQuantidade(quantidade);
 
-        LeitorCsv.lendoCsv(modelo);
+        ReadCsv.lendoCsv(modelo);
 
        Loop.inputLoop();
     }

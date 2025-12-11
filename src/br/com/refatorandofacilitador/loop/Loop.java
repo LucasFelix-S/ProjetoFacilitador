@@ -1,4 +1,4 @@
-package br.com.refatorandofacilitador.model;
+package br.com.refatorandofacilitador.loop;
 
 import java.util.Scanner;
 public class Loop {
@@ -8,6 +8,6 @@ public class Loop {
         System.out.println("1. Continuar lançamento");
         System.out.println("2. Sair");
         String escolha = scanner.nextLine();
-        ControleLoop.condicaoLoop(escolha);
+        LoopControl.condicaoLoop(escolha);
     }
 }

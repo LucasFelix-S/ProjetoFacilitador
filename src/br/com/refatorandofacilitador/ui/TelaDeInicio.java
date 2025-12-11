@@ -1,4 +1,4 @@
-package br.com.refatorandofacilitador.view;
+package br.com.refatorandofacilitador.ui;
 
 public class TelaDeInicio {
     public static void telaInicial() {

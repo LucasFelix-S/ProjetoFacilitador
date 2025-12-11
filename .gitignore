@@ -5,6 +5,9 @@ out/
 .kotlin
 *.iml
 .idea/
+ProjetoFacilitador.iml
+ProjetoFacilitadorRefatorado.iml
+saida.csv
 
 ### Eclipse ###
 .apt_generated

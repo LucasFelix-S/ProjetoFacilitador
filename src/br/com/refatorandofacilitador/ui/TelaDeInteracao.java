@@ -26,7 +26,7 @@ public class TelaDeInteracao {
         modelo.setValidade(validade);
         modelo.setQuantidade(quantidade);
 
-        ReadCsv.lendoCsv(modelo);
+        ReadCsv.readingCsv(modelo);
 
        Loop.inputLoop();
     }

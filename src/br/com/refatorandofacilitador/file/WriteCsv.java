@@ -5,11 +5,11 @@ import java.io.IOException;
 
 public class WriteCsv {
     public static void escrevendoCsv(String modelo) {
-        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("saida.csv", true))){
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data.csv", true))){
             bufferedWriter.write(modelo.toString());
             bufferedWriter.flush();
         } catch (IOException e) {
-            System.out.println("Erro= " + e);
+            System.out.println("Error writing output file. Class 'WriteCsv' " + e);
         }
     }
 }

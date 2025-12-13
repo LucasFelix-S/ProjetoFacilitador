@@ -1,30 +1,11 @@
-# ProjetoFacilitador
-------
+## ProjetoFacilitador
 
-O **ProjetoFacilitador** é um pequeno sistema em linha de comando (CLI) criado para agilizar o lançamento de produtos. A ideia é simples: o usuário informa alguns dados básicos, e o sistema cruza essas informações com um arquivo `.csv`, gerando um arquivo de saída já organizado.
+O **ProjetoFacilitador** é um pequeno sistema criado para agilizar o lançamento de produtos. A ideia é simples: o usuário informa alguns dados básicos, e o sistema cruza essas informações com um arquivo `.csv`, gerando um arquivo de saída já organizado para que seja usado em uma exportação via excel para a realização de inventários de estoque.
 
 ## Objetivo
 
-O objetivo é automatizar uma tarefa repetitiva: consultar produtos e registrar informações de forma rápida e padronizada.
-
-## Como funciona
-
-O usuário digita:
-- **EAN**
-- **Lote**
-- **Validade**
-- **Quantidade**
-
-O sistema lê um arquivo `.csv` existente e retorna um novo arquivo com:
-- EAN informado  
-- Código interno do produto 
-- Descrição do produto  
-- Lote  
-- Validade  
-- Quantidade digitada  
-
-Tudo pronto para uso posterior ou integração em outros sistemas.
+O objetivo é automatizar uma tarefa repetitiva: consultar produtos e registrar informações de forma rápida e padronizada, sem a necessidade de integração com qualquer sistema.
 
 ## Status
 
-O projeto está em versão inicial, mas já funcional. A ideia é expandir com novas validações, leitura de múltiplos arquivos, integração com bancos de dados e em breve a adição de uma interface gráfica utilizando o Java Swing.
+O projeto está em versão inicial, mas já funcional. A ideia é expandir com novas validações, leitura de múltiplos arquivos e integração com bancos de dados, tudo isso conforme meu aprendizado em Java for avançando.

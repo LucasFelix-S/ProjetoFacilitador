@@ -18,7 +18,7 @@ public class TelaDeInteracao {
         String validade = scanner.nextLine();
 
         System.out.println("QUANTIDADE CONTADA= ");
-        int quantidade = scanner.nextInt();
+        String quantidade = scanner.nextLine();
 
         CsvModel modelo = new CsvModel();
         modelo.setEan(ean);

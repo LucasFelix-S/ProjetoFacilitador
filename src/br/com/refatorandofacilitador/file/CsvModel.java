@@ -4,7 +4,7 @@ public class CsvModel {
     private String ean;
     private String lote;
     private String validade;
-    private int quantidade;
+    private String quantidade;
     private String resultado;
 
     public void setEan(String ean) { this.ean = ean; }
@@ -16,8 +16,8 @@ public class CsvModel {
     public void setValidade(String validade) { this.validade = validade; }
     public String getValidade() { return validade; }
 
-    public void setQuantidade(int quantidade) { this.quantidade = quantidade; }
-    public int getQuantidade() { return quantidade; }
+    public void setQuantidade(String quantidade) { this.quantidade = quantidade; }
+    public String getQuantidade() { return quantidade; }
 
     public void setResultado(String resultado) { this.resultado = resultado; }
     public String getResultado() { return resultado; }

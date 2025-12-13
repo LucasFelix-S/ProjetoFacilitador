@@ -1,7 +1,10 @@
 package br.com.refatorandofacilitador.ui;
 import br.com.refatorandofacilitador.file.CsvModel;
-
+import br.com.refatorandofacilitador.file.ReadCsv;
+import br.com.refatorandofacilitador.file.WriteCsv;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AppWindow {
     public static void interactionInterface() {
@@ -9,6 +12,8 @@ public class AppWindow {
 
         JFrame frame = new JFrame("Projeto Facilitador - Natus");
         frame.setSize(400, 400);
+        frame.setLocationRelativeTo(null);
+        frame.setResizable(false);
         frame.setVisible(true);
 
         JTextField campoEan = new JTextField();
@@ -36,5 +41,22 @@ public class AppWindow {
         JButton botaoInserir = new JButton("Inserir");
         botaoInserir.setBounds(33, 131, 100, 23);
         frame.add(botaoInserir);
+        botaoInserir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                model.setEan(campoEan.getText());
+                model.setLote(campoLote.getText());
+                model.setValidade(campoValidade.getText());
+                model.setQuantidade(campoQuantidade.getText());
+                WriteCsv.escrevendoCsv(model.toString());
+
+                ReadCsv.readingCsv(model);
+
+                campoEan.setText("");
+                campoLote.setText("");
+                campoValidade.setText("");
+                campoQuantidade.setText("");
+            }
+        });
     }
 }

@@ -11,7 +11,6 @@ public class ReadCsv {
         try(BufferedReader bufferedReader = new BufferedReader(new FileReader(file))){
             while((lines = bufferedReader.readLine()) != null) {
                 if(lines.contains(model.getEan())) {
-                    System.out.println(lines);
                     model.setResultado(lines);
                     WriteCsv.escrevendoCsv(model.toString());
                     break;

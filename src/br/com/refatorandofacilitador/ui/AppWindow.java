@@ -1,7 +1,6 @@
 package br.com.refatorandofacilitador.ui;
 import br.com.refatorandofacilitador.file.CsvModel;
 import br.com.refatorandofacilitador.file.ReadCsv;
-import br.com.refatorandofacilitador.file.WriteCsv;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +10,7 @@ public class AppWindow {
         CsvModel model = new CsvModel();
 
         JFrame frame = new JFrame("Projeto Facilitador - Natus");
-        frame.setSize(400, 400);
+        frame.setSize(400, 210);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setVisible(true);
@@ -48,8 +47,6 @@ public class AppWindow {
                 model.setLote(campoLote.getText());
                 model.setValidade(campoValidade.getText());
                 model.setQuantidade(campoQuantidade.getText());
-                WriteCsv.escrevendoCsv(model.toString());
-
                 ReadCsv.readingCsv(model);
 
                 campoEan.setText("");

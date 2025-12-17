@@ -2,6 +2,7 @@ package br.com.refatorandofacilitador.ui;
 import br.com.refatorandofacilitador.file.CsvModel;
 import br.com.refatorandofacilitador.file.ReadCsv;
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -53,6 +54,20 @@ public class AppWindow {
                 campoLote.setText("");
                 campoValidade.setText("");
                 campoQuantidade.setText("");
+            }
+        });
+
+        JButton botaoSelecionaArquivo = new JButton("...");
+        botaoSelecionaArquivo.setBounds(143, 131, 25, 23);
+        frame.add(botaoSelecionaArquivo);
+        botaoSelecionaArquivo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser chooser = new JFileChooser();
+                int returnVal = chooser.showOpenDialog(null);
+                if(returnVal == JFileChooser.APPROVE_OPTION) {
+                    System.out.println(chooser.getSelectedFile());
+                }
             }
         });
     }

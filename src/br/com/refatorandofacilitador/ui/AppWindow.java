@@ -2,7 +2,6 @@ package br.com.refatorandofacilitador.ui;
 import br.com.refatorandofacilitador.file.CsvModel;
 import br.com.refatorandofacilitador.file.ReadCsv;
 import javax.swing.*;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -20,26 +19,20 @@ public class AppWindow {
         campoEan.setBounds(33, 38, 158, 20);
         frame.add(campoEan);
 
-        JTextField campoDescricao = new JTextField();
-        campoDescricao.setEditable(false);
-        campoDescricao.setEnabled(false);
-        campoDescricao.setBounds(33, 69, 320, 20);
-        frame.add(campoDescricao);
-
         JTextField campoLote = new JTextField();
-        campoLote.setBounds(33, 100, 100,20);
+        campoLote.setBounds(33, 70, 100,20);
         frame.add(campoLote);
 
         JTextField campoValidade = new JTextField();
-        campoValidade.setBounds(143, 100, 100,20);
+        campoValidade.setBounds(143, 70, 100,20);
         frame.add(campoValidade);
 
         JTextField campoQuantidade = new JTextField();
-        campoQuantidade.setBounds(253, 100, 100,20);
+        campoQuantidade.setBounds(253, 70, 100,20);
         frame.add(campoQuantidade);
 
         JButton botaoInserir = new JButton("Inserir");
-        botaoInserir.setBounds(33, 131, 100, 23);
+        botaoInserir.setBounds(33, 100, 100, 23);
         frame.add(botaoInserir);
         botaoInserir.addActionListener(new ActionListener() {
             @Override
@@ -58,15 +51,17 @@ public class AppWindow {
         });
 
         JButton botaoSelecionaArquivo = new JButton("...");
-        botaoSelecionaArquivo.setBounds(143, 131, 25, 23);
+        botaoSelecionaArquivo.setBounds(143, 100, 25, 23);
         frame.add(botaoSelecionaArquivo);
         botaoSelecionaArquivo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser chooser = new JFileChooser();
+                String file;
                 int returnVal = chooser.showOpenDialog(null);
                 if(returnVal == JFileChooser.APPROVE_OPTION) {
-                    System.out.println(chooser.getSelectedFile());
+                    file = chooser.getSelectedFile().toString();
+                    model.setNewFile(file);
                 }
             }
         });

@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class WriteCsv {
     public static void escrevendoCsv(String modelo) {
-        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("C:\\Users\\Lucas Felix Santos\\OneDrive\\Desktop\\data.csv", true))){
+        try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data.csv", true))){
             bufferedWriter.write(modelo.toString());
             bufferedWriter.flush();
         } catch (IOException e) {

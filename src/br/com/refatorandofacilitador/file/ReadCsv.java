@@ -5,10 +5,9 @@ import java.io.IOException;
 
 public class ReadCsv {
     public static String readingCsv(CsvModel model) {
-        String file = "dados-cadastrais-dos-produtos.csv";
         String lines = "";
 
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(file))){
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(model.getNewFile()))){
             while((lines = bufferedReader.readLine()) != null) {
                 if(lines.contains(model.getEan())) {
                     model.setResultado(lines);

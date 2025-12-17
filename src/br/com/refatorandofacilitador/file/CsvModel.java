@@ -6,6 +6,7 @@ public class CsvModel {
     private String validade;
     private String quantidade;
     private String resultado;
+    private String newFile;
 
     public void setEan(String ean) { this.ean = ean; }
     public String getEan() { return ean; }
@@ -21,6 +22,9 @@ public class CsvModel {
 
     public void setResultado(String resultado) { this.resultado = resultado; }
     public String getResultado() { return resultado; }
+
+    public void setNewFile(String newFile) {this.newFile = newFile; }
+    public String getNewFile() { return newFile; }
 
     @Override
     public String toString() {

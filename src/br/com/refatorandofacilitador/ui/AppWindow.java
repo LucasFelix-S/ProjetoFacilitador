@@ -10,29 +10,62 @@ public class AppWindow {
         CsvModel model = new CsvModel();
 
         JFrame frame = new JFrame("Projeto Facilitador - Natus");
-        frame.setSize(400, 210);
+        frame.setSize(445, 220);
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
         frame.setVisible(true);
 
+        JLabel jLabelTitulo = new JLabel();
+        jLabelTitulo.setFont(new java.awt.Font("Arial", 1, 14));
+        jLabelTitulo.setBounds(0,0,443, 25);
+        jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelTitulo.setText("LANÇAMENTO DE PRODUTOS");
+        jLabelTitulo.setToolTipText("");
+        jLabelTitulo.setBorder(javax.swing.BorderFactory.createLineBorder(null));
+        frame.add(jLabelTitulo);
+
+        JLabel jLabelEan = new JLabel("EAN:");
+        jLabelEan.setFont(new java.awt.Font("Arial", 1, 10));
+        jLabelEan.setHorizontalAlignment(SwingConstants.RIGHT);
+        jLabelEan.setBounds(0, 45, 70, 20);
+        frame.add(jLabelEan);
+
+        JLabel jLabelLote = new JLabel("LOTE:");
+        jLabelLote.setFont(new java.awt.Font("Arial", 1, 10));
+        jLabelLote.setHorizontalAlignment(SwingConstants.RIGHT);
+        jLabelLote.setBounds(0, 70, 70, 20);
+        frame.add(jLabelLote);
+
+        JLabel jLabelValidade = new JLabel("VALIDADE:");
+        jLabelValidade.setFont(new java.awt.Font("Arial", 1, 10));
+        jLabelValidade.setHorizontalAlignment(SwingConstants.RIGHT);
+        jLabelValidade.setBounds(0, 95, 70, 20);
+        frame.add(jLabelValidade);
+
+        JLabel jLabelQuantidade = new JLabel("QUANTIDADE:");
+        jLabelQuantidade.setFont(new java.awt.Font("Arial", 1, 10));
+        jLabelQuantidade.setHorizontalAlignment(SwingConstants.RIGHT);
+        jLabelQuantidade.setBounds(0, 120, 70, 20);
+        frame.add(jLabelQuantidade);
+
         JTextField campoEan = new JTextField();
-        campoEan.setBounds(33, 38, 158, 20);
+        campoEan.setBounds(75, 45, 200, 20);
         frame.add(campoEan);
 
         JTextField campoLote = new JTextField();
-        campoLote.setBounds(33, 70, 100,20);
+        campoLote.setBounds(75, 70, 200, 20);
         frame.add(campoLote);
 
         JTextField campoValidade = new JTextField();
-        campoValidade.setBounds(143, 70, 100,20);
+        campoValidade.setBounds(75, 95, 200, 20);
         frame.add(campoValidade);
 
         JTextField campoQuantidade = new JTextField();
-        campoQuantidade.setBounds(253, 70, 100,20);
+        campoQuantidade.setBounds(75, 120, 200, 20);
         frame.add(campoQuantidade);
 
         JButton botaoInserir = new JButton("Inserir");
-        botaoInserir.setBounds(33, 100, 100, 23);
+        botaoInserir.setBounds(285, 120, 140, 20);
         frame.add(botaoInserir);
         botaoInserir.addActionListener(new ActionListener() {
             @Override
@@ -50,8 +83,8 @@ public class AppWindow {
             }
         });
 
-        JButton botaoSelecionaArquivo = new JButton("...");
-        botaoSelecionaArquivo.setBounds(143, 100, 25, 23);
+        JButton botaoSelecionaArquivo = new JButton("Escolher Arquivo");
+        botaoSelecionaArquivo.setBounds(285, 45, 140, 20);
         frame.add(botaoSelecionaArquivo);
         botaoSelecionaArquivo.addActionListener(new ActionListener() {
             @Override
@@ -62,6 +95,10 @@ public class AppWindow {
                 if(returnVal == JFileChooser.APPROVE_OPTION) {
                     file = chooser.getSelectedFile().toString();
                     model.setNewFile(file);
+                    JOptionPane.showMessageDialog(null,
+                            "Importação realizada com sucesso",
+                            "sucesso"
+                    ,JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         });

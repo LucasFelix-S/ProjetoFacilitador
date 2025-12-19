@@ -7,7 +7,7 @@ public class ReadCsv {
     public static String readingCsv(CsvModel model) {
         String lines = "";
 
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(model.getNewFile()))){
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(model.getInputFile()))){
             while((lines = bufferedReader.readLine()) != null) {
                 if(lines.contains(model.getEan())) {
                     model.setResultado(lines);

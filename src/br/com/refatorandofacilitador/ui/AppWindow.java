@@ -64,6 +64,27 @@ public class AppWindow {
         campoQuantidade.setBounds(75, 120, 200, 20);
         frame.add(campoQuantidade);
 
+
+        JButton botaoSelecionaArquivo = new JButton("Escolher Arquivo");
+        botaoSelecionaArquivo.setBounds(285, 95, 140, 20);
+        frame.add(botaoSelecionaArquivo);
+        botaoSelecionaArquivo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String inputFile;
+                JFileChooser inputChooser = new JFileChooser();
+                int returnVal = inputChooser.showOpenDialog(null);
+                if(returnVal == JFileChooser.APPROVE_OPTION) {
+                    inputFile = inputChooser.getSelectedFile().toString();
+                    model.setInputFile(inputFile);
+                    JOptionPane.showMessageDialog(null,
+                            "Importação realizada com sucesso!",
+                            "Sucesso!"
+                    ,JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+        });
+
         JButton botaoInserir = new JButton("Inserir");
         botaoInserir.setBounds(285, 120, 140, 20);
         frame.add(botaoInserir);
@@ -80,26 +101,6 @@ public class AppWindow {
                 campoLote.setText("");
                 campoValidade.setText("");
                 campoQuantidade.setText("");
-            }
-        });
-
-        JButton botaoSelecionaArquivo = new JButton("Escolher Arquivo");
-        botaoSelecionaArquivo.setBounds(285, 45, 140, 20);
-        frame.add(botaoSelecionaArquivo);
-        botaoSelecionaArquivo.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser chooser = new JFileChooser();
-                String file;
-                int returnVal = chooser.showOpenDialog(null);
-                if(returnVal == JFileChooser.APPROVE_OPTION) {
-                    file = chooser.getSelectedFile().toString();
-                    model.setNewFile(file);
-                    JOptionPane.showMessageDialog(null,
-                            "Importação realizada com sucesso",
-                            "sucesso"
-                    ,JOptionPane.INFORMATION_MESSAGE);
-                }
             }
         });
     }

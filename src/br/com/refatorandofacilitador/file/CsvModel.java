@@ -7,7 +7,6 @@ public class CsvModel {
     private String quantidade;
     private String resultado;
     private String inputFile;
-    private String outputFile;
 
     public void setEan(String ean) { this.ean = ean; }
     public String getEan() { return ean; }
@@ -26,9 +25,6 @@ public class CsvModel {
 
     public void setInputFile(String inputFile) {this.inputFile = inputFile; }
     public String getInputFile() { return inputFile; }
-
-    public void setOutputFile(String outputFile) { this.outputFile = outputFile; }
-    public String getOutputFile() { return outputFile; };
 
     @Override
     public String toString() {

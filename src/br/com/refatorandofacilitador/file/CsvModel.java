@@ -29,9 +29,9 @@ public class CsvModel {
     @Override
     public String toString() {
         return getResultado()
-                + "," + getLote()
-                + "," + getValidade()
-                + "," + getQuantidade()
+                + ";" + getLote()
+                + ";" + getValidade()
+                + ";" + getQuantidade()
                 + "\n";
     }
 }

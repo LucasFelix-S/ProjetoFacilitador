@@ -1,16 +1,12 @@
 package br.com.refatorandofacilitador.ui;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
+import javax.swing.*;
+
 import br.com.refatorandofacilitador.file.CsvModel;
 import br.com.refatorandofacilitador.file.ReadCsv;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JFileChooser;
 
 public class AppUi extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -62,6 +58,10 @@ public class AppUi extends JPanel {
 				int returnVal = jfc.showOpenDialog(null);
 				if(returnVal == JFileChooser.APPROVE_OPTION) {
 					model.setInputFile(jfc.getSelectedFile().toString());
+                    JOptionPane.showMessageDialog(null,
+                            "Importação realizada com sucesso!",
+                            "Sucesso!",
+                            JOptionPane.INFORMATION_MESSAGE);
 				}
 			}
 		});
@@ -83,6 +83,11 @@ public class AppUi extends JPanel {
 				campoLote.setText("");
 				campoValidade.setText("");
 				campoQuantidade.setText("");
+
+                JOptionPane.showMessageDialog(null,
+                        "Dados inseridos.",
+                        "Sucesso!",
+                        JOptionPane.INFORMATION_MESSAGE);
 			}
 		});
 		btnInserir.setFont(new Font("Arial", Font.PLAIN, 11));

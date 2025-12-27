@@ -2,7 +2,8 @@ package br.com.refatorandofacilitador.ui;
 import javax.swing.*;
 import br.com.refatorandofacilitador.file.CsvModel;
 import br.com.refatorandofacilitador.file.ReadCsv;
-import java.awt.Font;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,7 +19,8 @@ public class AppUi extends JPanel {
 		setLayout(null);
 		
 		JLabel tituloLabel = new JLabel("LANÇAMENTO DE PRODUTO");
-		tituloLabel.setBounds(0, 0, 462, 35);
+		tituloLabel.setBounds(0, 0, 464, 35);
+        tituloLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
 		tituloLabel.setFont(new Font("Arial", Font.BOLD, 14));
 		tituloLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		add(tituloLabel);

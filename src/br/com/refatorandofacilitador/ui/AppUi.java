@@ -1,7 +1,5 @@
 package br.com.refatorandofacilitador.ui;
-
 import javax.swing.*;
-
 import br.com.refatorandofacilitador.file.CsvModel;
 import br.com.refatorandofacilitador.file.ReadCsv;
 import java.awt.Font;
@@ -54,16 +52,21 @@ public class AppUi extends JPanel {
 		btnArquivo.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				JFileChooser jfc = new JFileChooser();
-				int returnVal = jfc.showOpenDialog(null);
-				if(returnVal == JFileChooser.APPROVE_OPTION) {
-					model.setInputFile(jfc.getSelectedFile().toString());
+                JFileChooser jfc = new JFileChooser();
+                int returnVal = jfc.showOpenDialog(null);
+                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                    model.setInputFile(jfc.getSelectedFile().toString());
                     JOptionPane.showMessageDialog(null,
                             "Importação realizada com sucesso!",
                             "Sucesso!",
                             JOptionPane.INFORMATION_MESSAGE);
-				}
-			}
+                } else if (returnVal == JFileChooser.CANCEL_OPTION) {
+                    JOptionPane.showMessageDialog(null,
+                            "Nenhum arquivo foi selecionado",
+                            "Atenção!",
+                            JOptionPane.ERROR_MESSAGE);
+                }
+            }
 		});
 		btnArquivo.setFont(new Font("Arial", Font.PLAIN, 11));
 		add(btnArquivo);
@@ -116,6 +119,5 @@ public class AppUi extends JPanel {
 		quantidadeLabel.setFont(new Font("Arial", Font.PLAIN, 11));
 		quantidadeLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(quantidadeLabel);
-		
 	}
 }

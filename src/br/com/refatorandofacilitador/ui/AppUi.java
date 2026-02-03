@@ -6,6 +6,7 @@ import br.com.refatorandofacilitador.file.ReadCsv;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.table.DefaultTableModel;
 
 public class AppUi extends JPanel {
 	private static final long serialVersionUID = 1L;
@@ -13,6 +14,7 @@ public class AppUi extends JPanel {
 	private JTextField campoLote;
 	private JTextField campoValidade;
 	private JTextField campoQuantidade;
+	private JTable jTable;
 
 	public AppUi() {
 		CsvModel model = new CsvModel();
@@ -84,6 +86,11 @@ public class AppUi extends JPanel {
 				model.setQuantidade(campoQuantidade.getText());
 				ReadCsv.readingCsv(model);
 				
+                DefaultTableModel model = (DefaultTableModel)jTable.getModel();
+                model.addRow(new Object[] {
+                	campoEan.getText(), campoLote.getText(), campoValidade.getText(), campoQuantidade.getText()
+                });
+				
 				campoEan.setText("");
 				campoLote.setText("");
 				campoValidade.setText("");
@@ -121,5 +128,27 @@ public class AppUi extends JPanel {
 		quantidadeLabel.setFont(new Font("Arial", Font.PLAIN, 11));
 		quantidadeLabel.setHorizontalAlignment(SwingConstants.RIGHT);
 		add(quantidadeLabel);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 175, 434, 189);
+		add(scrollPane);
+		
+		jTable = new JTable();
+		scrollPane.setViewportView(jTable);
+		jTable.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"EAN", "LOTE", "VALIDADE", "QUANTIDADE"
+			}
+		));
 	}
 }
+
+
+
+
+
+
+
+

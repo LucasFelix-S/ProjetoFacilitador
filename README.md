@@ -47,10 +47,10 @@ O foco do projeto é reduzir retrabalho manual e minimizar erros comuns em proce
 
 🔹 O projeto conta com arquivos de exemplo para facilitar o entendimento do fluxo completo:
 
-- **Arquivo de entrada (`input.csv`)**  
+- **Arquivo de entrada (`input-data-example.csv`)**  
   Contém os dados base utilizados pelo sistema para o processamento.
 
-- **Arquivo de saída (`output.csv`)**  
+- **Arquivo de saída (`output-data-example.csv`)**  
   Gerado automaticamente pelo sistema, já organizado para importação ou análise no Excel.
 
 Esses arquivos servem como referência para testes e validação do funcionamento da aplicação.

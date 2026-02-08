@@ -140,7 +140,7 @@ public class AppUi extends JPanel {
 			},
 			new String[] {
 				"EAN", "LOTE", "VALIDADE", "QUANTIDADE"
-			}
+    }
 		));
 	}
 }

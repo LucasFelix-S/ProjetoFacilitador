@@ -7,7 +7,6 @@ out/
 .idea/
 ProjetoFacilitador.iml
 ProjetoFacilitadorRefatorado.iml
-*.csv
 
 ### Eclipse ###
 .apt_generated

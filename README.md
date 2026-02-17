@@ -11,9 +11,9 @@ A ideia é simples: o usuário informa alguns dados básicos, o sistema cruza es
 <p align="center">
   <img src="https://img.shields.io/badge/Java-ED8B00?style=plastic&logo=java&logoColor=white" height="18"/>
 </p>
-🔹 **Java (puro)** — lógica principal da aplicação  
-🔹 **Swing** — interface gráfica desktop  
-🔹 **BufferedReader / BufferedWriter** — leitura e escrita eficiente de arquivos `.csv`
+🔹 Java (puro) — lógica principal da aplicação  
+🔹 Swing — interface gráfica desktop  
+🔹 BufferedReader / BufferedWriter — leitura e escrita eficiente de arquivos `.csv`
 
 ---
 

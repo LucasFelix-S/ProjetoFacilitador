@@ -1,6 +1,6 @@
 # ProjetoFacilitador
 
-🗺️ O **ProjetoFacilitador** é um pequeno sistema desktop criado para agilizar o lançamento de produtos e apoiar processos de inventário de estoque.
+🖥️ O **ProjetoFacilitador** é um pequeno sistema desktop criado para agilizar o lançamento de produtos e apoiar processos de inventário de estoque.
 
 A ideia é simples: o usuário informa alguns dados básicos, o sistema cruza essas informações com um arquivo `.csv` e gera um arquivo de saída já organizado, pronto para ser utilizado em exportações via Excel durante inventários de estoque.
 
